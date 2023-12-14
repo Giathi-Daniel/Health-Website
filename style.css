@@ -57,7 +57,7 @@ body{
 
 /* Header section */
 header{
-    background-image: linear-gradient(to right, rgba(18, 172, 142, .9), rgba(18, 172, 142, .7)), url("images/");
+    background-image: linear-gradient(to right, rgba(18, 172, 142, .9), rgba(18, 172, 142, .7)), url("images/hero.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -261,6 +261,7 @@ header{
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-size: 2.5rem;
     color: var(--primary-color);
     border-radius: 10px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
@@ -348,4 +349,138 @@ header{
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--text-dark);
+}
+.doctors_card p{
+    margin-block-end: 1rem;
+    color: var(--text-light);
+}
+
+
+/* Footer Section */
+.footer{
+    background-color: var(--primary-color-light);
+}
+.footer_container{
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap:2rem;
+}
+.footer_col h3{
+    margin-block-end: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.footer_col h3 span{
+    color: var(--secondary-color);
+}
+.footer_col h4{
+    margin-block-end: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.footer_col p{
+    margin-block-end: 1rem;
+    color: (--text-dark);
+    cursor: pointer;
+    transition: .3s;
+}
+.footer_col p:hover{
+    color: var(--primary-color);
+}
+.footer_col i{
+    color: var(--primary-color);
+}
+.footer_bar{
+    background-color: var(--primary-color);
+}
+.footer_bar_content{
+    max-inline-size: var(--max-width);
+    margin:  auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.footer_bar_content p{
+    font-size: 0.8rem;
+    color: var(--white);
+}
+.footer_socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+
+
+/* RESPONSIVENESS */
+@media (width < 900px){
+    .service_grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .about_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about_image{
+        grid-area: 1/1/2/2;
+    }
+    .about_content{
+        text-align: center;
+    }
+    .why_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .why_content{
+        text-align: center;
+    }
+    .why_grid{
+        text-align: start;
+    }
+    .doctors_grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .footer_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width < 780px){
+    .nav_links{
+        display: none;
+    }
+    .header_container{
+        flex-direction: column;
+    }
+}
+
+@media (width < 600px){
+    .service_header{
+        flex-direction: column;
+        text-align: center;
+    }
+    .service_grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .why_grid{
+        column-gap: 1rem;
+    }
+    .doctors_header{
+        flex-direction: column;
+        text-align: center;
+    }
+    .doctors_grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer_bar_content{
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
